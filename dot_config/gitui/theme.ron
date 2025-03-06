@@ -1,0 +1,5 @@
+(
+  selection_fg: Some("Black"),
+  cmdbar_bg: Some("DarkGray"),
+  cmdbar_extra_lines_bg: Some("DarkGray"),
+)
