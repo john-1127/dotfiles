@@ -7,25 +7,13 @@ local remap = LazyVim.safe_keymap_set
 remap("i", "ii", "<Esc>", { desc = "Change mode from Insert to Normal" })
 remap("n", "a", "A", { desc = "Jump to the End of the line in Insert mode" })
 
+-- Tags
 remap("n", "gj", "g<C-]>", { desc = "Go to Definition (Tags)" })
 remap("n", "gp", "<C-t>", { desc = "Tag stack back" })
 
--- remap("n", "gj", function()
---   local keyword = vim.fn.expand("<cword>")
---   Snacks.picker.tags({
---     pattern = "^" .. keyword .. "$",
---     matcher = {
---       fuzzy = false,
---       regex = true,
---     },
---   })
--- end, { desc = "Go to Definition (Snacks Tags)" })
---
--- remap("n", "gj", function()
---   Snacks.picker.grep({
---     args = { "/home/john/.cache/nvim/ctags/" },
---     limit = 100,
---     need_search = true,
---     promtp = "󰓻 Static Tags > ",
---   })
--- end, { desc = "Go to Definition (Snacks Tags)" })
+-- Tabs
+remap("n", "tn", "<cmd>tabnew<cr>", { desc = "New Tab" })
+remap("n", "td", "<cmd>tabclose<cr>", { desc = "Close Tab" })
+remap("n", "th", "<cmd>tabprevious<cr>", { desc = "Prev Tab" })
+remap("n", "tl", "<cmd>tabnext<cr>", { desc = "Next Tab" })
+remap("n", "tN", "<cmd>tab split<cr>", { desc = "Open Current Buffer in New Tab" })

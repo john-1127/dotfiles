@@ -10,16 +10,25 @@ return {
           },
           view = "confirm",
           priority = 200,
-          opts = {
-            enter = true,
+          opts = {},
+        },
+
+        {
+          filter = {
+            event = "msg_show",
+            find = "TO%s+tag",
           },
+          view = "popup",
+          opts = {},
         },
       },
       views = {
+
         cmdline_popup = {
           backend = "popup",
           zindex = 210,
         },
+
         confirm = {
           backend = "popup",
           relative = "editor",
@@ -33,9 +42,7 @@ return {
             height = "auto",
             max_height = 100,
           },
-          win_options = {
-            -- winhighlight = { Normal = "NoiceConfirm", FloatBorder = "NoiceConfirmBorder" },
-          },
+          win_options = {},
           border = {
             style = "rounded",
             text = {
