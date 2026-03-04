@@ -7,6 +7,9 @@ local remap = LazyVim.safe_keymap_set
 remap("i", "ii", "<Esc>", { desc = "Change mode from Insert to Normal" })
 remap("n", "a", "A", { desc = "Jump to the End of the line in Insert mode" })
 
+--Debug
+remap("n", "<leader>dv", ":vertical diffsplit ", { desc = "Vertical Diffsplit" })
+
 -- Tags
 remap("n", "gj", "g<C-]>", { desc = "Go to Definition (Tags)" })
 remap("n", "gp", "<C-t>", { desc = "Tag stack back" })
